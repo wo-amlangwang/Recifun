@@ -55,10 +55,6 @@ module.exports = function(app,passport) {
   });
 
   app.get('/',function(req,res,next) {
-    if(req.isAuthenticated()){
-      res.send('yes');
-    }else {
-      res.send('no');
-    }
+    res.sendFile(__dirname + '/www/index.html');
   });
 };
