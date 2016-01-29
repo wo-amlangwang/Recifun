@@ -1,5 +1,5 @@
 module.exports = function(app,passport) {
-  app.get('/register',function(req,res,next) {
+  app.get('/api/register',function(req,res,next) {
     passport.authenticate('local-register',function(err,user,info) {
       if(err){
         if(req.isAuthenticated()){
@@ -24,7 +24,7 @@ module.exports = function(app,passport) {
     })(req,res,next);
   });
 
-  app.post('/login',function(req,res,next) {
+  app.post('/api/login',function(req,res,next) {
     passport.authenticate('local-login',function(err,user,info) {
       if(err){
         if(req.isAuthenticated()){
@@ -49,9 +49,9 @@ module.exports = function(app,passport) {
     })(req,res,next);
   });
 
-  app.get('/logout',function(req,res,nest) {
+  app.get('/api/logout',function(req,res,nest) {
     req.logout();
-    res.redirect('/');
+    res.sendStatus(200);
   });
 
   app.get('/',function(req,res,next) {
