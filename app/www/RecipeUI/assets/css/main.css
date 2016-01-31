@@ -2611,9 +2611,9 @@
 			.post > header .meta {
 				padding: 3.75em 3em 1.75em 3em ;
 				border-left: solid 1px rgba(160, 160, 160, 0.3);
-				min-width: 17em;
+				min-width: 20em;
 				text-align: right;
-				width: 17em;
+				width: 20em;
 			}
 
 				.post > header .meta > * {
@@ -3111,11 +3111,11 @@
 		}
 
 			#header #search input {
-				width: 12em;
+				width: 20em;
 			}
 
 			#header #search.visible {
-				max-width: 12.5em;
+				max-width: 20.5em;
 				opacity: 1;
 				padding: 0 0.5em 0 0;
 			}
@@ -3135,14 +3135,10 @@
 				line-height: 2.75em;
 			}
 
-				#header h1 {
-					padding: 0 0 0 1em;
-				}
-
-				#header .main .search {
-					display: none;
-				}
-
+			#header h1 {
+				padding: 0 0 0 1em;
+			}
+			
 		}
 
 /* Wrapper */
