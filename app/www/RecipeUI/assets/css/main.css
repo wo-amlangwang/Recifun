@@ -2540,12 +2540,14 @@
 				-webkit-flex-wrap: wrap;
 				-ms-flex-wrap: wrap;
 				flex-wrap: wrap;
-				width: calc(100% + 2em);
+				width: calc(100%);
 			}
 
 				.mini-posts > * {
-					margin: 0 0 0 0;
-					width: calc(25% - 0.5em);
+  					margin-right: auto;
+  					margin-left: auto;
+					width: calc(25%);
+					min-width: 270px
 				}
 
 				.mini-posts > :nth-child(-n + 2) {
