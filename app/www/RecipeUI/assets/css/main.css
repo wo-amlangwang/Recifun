@@ -2485,7 +2485,13 @@
 				-webkit-transition: -webkit-transform 0.2s ease-out;
 				-ms-transition: -ms-transform 0.2s ease-out;
 				transition: transform 0.2s ease-out;
-				width: 100%;
+				
+			    min-width:400px;
+			    min-height:200px;
+			    max-width:400px;
+			    max-height:200px;
+			    width: auto;
+			    height: auto;
 			}
 
 			.mini-post .image:hover img {
