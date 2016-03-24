@@ -6,7 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style> 
+		<style>
 			body {
 		    	background-image: url("images/img1.png");
 			}
@@ -21,17 +21,6 @@
 				<!-- Header -->
 					<header id="header">
 						<h1><a href="#">ReciFun</a></h1>
-						<!--
-						<nav class="links">
-							<ul>
-								<li><a href="#">nav1</a></li>
-								<li><a href="#">nav2</a></li>
-								<li><a href="#">nav3</a></li>
-								<li><a href="#">nav4</a></li>
-								<li><a href="#">nav5</a></li>
-							</ul>
-						</nav>
-						-->
 						<nav class="main">
 							<ul>
 								<li class="search">
@@ -91,8 +80,8 @@
 											<p>Notification, comments, etc.</p>
 										</a>
 									</li>
-									
-									
+
+
 								</ul>
 							</section>
 
@@ -106,41 +95,99 @@
 					</section>
 
 				<!-- Main -->
-					<div id="main">
-						<article class="post">
-							
-						<!-- user information table -->
-							<section>
-								<form action="form_handler.php" method="post">
-									<div>
-										<textarea cols="80" rows="10" id="content" name="content"> 
-										
-										</textarea>
-										<script type="text/javascript">
-											CKEDITOR.replace( 'articleContent' );
-										</script>
-										<input type="submit" value="Submit"/>
+				<div id="main">
+					<article class="post">
+						<header>
+							<div class="title">
+								<h2><a href='#' >Create a recipe </a></h2>
+							</div>
+						</header>
+						<h3>Recipe Title</h3>
+						<input id="cook_name" name="cook_name" type="text" maxlength="30" class="upfnam r5" value="Recipe Title" onfocus="if(this.value==&#39;Recipe Title&#39;) {this.value=&#39;&#39;; $(this).addClass(&#39;fcbm&#39;); }" onblur="if(!this.value) {this.value=&#39;Recipe Title&#39;;$(this).removeClass(&#39;fcbm&#39;);}">
+					</br>
+						<div class="upfood clearfix">
+							<div class="foicp pvl clearfix libufo">
+								<div id="imgUploadNow">
+									<div style="position: relative; display: block; overflow: hidden; width: 600px;">
+										<div class="buttadd2" id="uploadCookImage"></div>
+										<input tabindex="-1" type="file" name="uploadFile" style="position: absolute; margin: 0px; padding: 0px; width: 220px; opacity: 0; top: 149px; left: 86px;">
 									</div>
-								</form>
-							</section>
+									<div class="iload2" id="iloading" style="display:none;">
+								  		正在上传…
+									</div>
+								</div>
+								<input type="hidden" name="coverImageUrl" id="coverImageUrl">
+								<div class="mrl" id="imgUploadSucc" style="display:none;position: relative;">
+									 <img id="upCookImageCover" src="" style="cursor:pointer;width:600px; height:400px;">
+									 <span title="更换图片" class="ic_chare2" style="right:20px;"></span>
+								</div>
+								<!--
+								<div class="restory pbm" style="margin-top: 20px;">
+									<select id="cook_difficulty" name="cook_difficulty" class="seleco">
+										<option value="">How Difficult</option>
+										<option value="1">Beginner</option>
+										<option value="2">Medium</option>
+										<option value="3">High</option>
+									</select>
+									<select id="costtime" name="costtime" class="seleco">
+										<option value="">Time Spend</option>
+										<option value="10分左右">10 min</option>
+										<option value="10-30分钟">10-30 min</option>
+										<option value="30-60分钟">30-60 min</option>
+										<option value="1小时以上">more than 1 hour</option>
+									</select>
+								</div>
+								-->
+								<!-- ingradient table -->
+								<div class="ingredient table">
+									<section>
+										<h3>Ingradients</h3>
+										<div class="row uniform">
+											<div id="ingredient-name" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+											</div>
+											<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+											</div>
+											<div id="ingredient-name" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+											</div>
+											<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+											</div>
+											<div id="ingredient-name" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+											</div>
+											<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+											</div>
+											<div class="adlan">
+												<a href="javascript:void(0);" tabindex="-1" id="zhuliao" style="display:block;">add more</a>
+											</div>
+										</div>
+									</section>
+								</br>
+								</div>
+							</div>
+						</div>
+					</article>
+				</div>
 
-					
+	<!-- Sidebar -->
+		<section id="sidebar">
 
-				<!-- Sidebar -->
-					<section id="sidebar">
+			<!-- Intro -->
+				<section id="intro">
+					<header>
+						<h4>ReciFun</h4>
+						<p color="#FFFAFA">
+						This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
+					</header>
+				</section>
 
-						<!-- Intro -->
-							<section id="intro">
-								<header>
-									<h4>ReciFun</h4>
-									<p color="#FFFAFA">
-									This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
-								</header>
-							</section>
+		</section>
 
-					</section>
-
-			</div>
+	</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
