@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>ReciFun</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style> 
+			body {
+		    	background-image: url("images/img1.png");
+			}
+		</style>
+		<script type="text/javascript" src="/Users/wellxchen/Desktop/Recifun/app/www/RecipeUI/ckeditor/ckeditor.js"></script>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="#">ReciFun</a></h1>
+						<!--
+						<nav class="links">
+							<ul>
+								<li><a href="#">nav1</a></li>
+								<li><a href="#">nav2</a></li>
+								<li><a href="#">nav3</a></li>
+								<li><a href="#">nav4</a></li>
+								<li><a href="#">nav5</a></li>
+							</ul>
+						</nav>
+						-->
+						<nav class="main">
+							<ul>
+								<li class="search">
+									<a class="fa-search" href="#search">Search</a>
+									<form id="search" method="get" action="#">
+										<input type="text" name="query" placeholder="Search" />
+									</form>
+								</li>
+								<li class="menu">
+									<a class="fa-bars" href="#menu">Menu</a>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<section id="menu">
+
+						<!-- Search
+							<section>
+								<form class="search" method="get" action="#">
+									<input type="text" name="query" placeholder="Search" />
+								</form>
+							</section>
+						-->
+
+						<!-- Links -->
+							<section>
+								<ul class="links">
+									<li>
+										<a href="#">
+											<h3>Profile</h3>
+											<p>Personal information, edit allowed</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>My recipes</h3>
+											<p>The recipes uploaded by yourself</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Favorite</h3>
+											<p>The recipes you saved</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Followed</h3>
+											<p>The uploader you followed</p>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<h3>Message</h3>
+											<p>Notification, comments, etc.</p>
+										</a>
+									</li>
+									
+									
+								</ul>
+							</section>
+
+						<!-- Actions -->
+							<section>
+								<ul class="actions vertical">
+									<li><a href="#" class="button big fit">Log In</a></li>
+								</ul>
+							</section>
+
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+						<article class="post">
+							
+						<!-- user information table -->
+							<section>
+								<form action="form_handler.php" method="post">
+									<div>
+										<textarea cols="80" rows="10" id="content" name="content"> 
+										
+										</textarea>
+										<script type="text/javascript">
+											CKEDITOR.replace( 'articleContent' );
+										</script>
+										<input type="submit" value="Submit"/>
+									</div>
+								</form>
+							</section>
+
+					
+
+				<!-- Sidebar -->
+					<section id="sidebar">
+
+						<!-- Intro -->
+							<section id="intro">
+								<header>
+									<h4>ReciFun</h4>
+									<p color="#FFFAFA">
+									This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
+								</header>
+							</section>
+
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	</body>
+</html>

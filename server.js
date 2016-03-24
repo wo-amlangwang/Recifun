@@ -23,7 +23,7 @@ app.use(bodyParser.json());
 app.use(session({secret : randomstring.generate(16),  cookie:{maxAge:60000}}));
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.use(express.static(__dirname + '/app/www'));
 
 require('./app/router')(app,passport);
 
