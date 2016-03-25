@@ -25,6 +25,60 @@
 			}
 		</script>
 
+		<!-- Upload photo style sheet -->
+		<style type="text/css">
+			#image-preview {
+				width: 400px;
+				min-height: 200px;
+				height: auto;
+				position: center;
+				border-width: 5px;
+				border-color: #f0f0f0;
+				border-style: solid;
+				vertical-align: center;
+				line-height: 0;
+
+				background-color: #e0e0e0;
+				color: #ecf0f1;
+				input {
+					line-height: 200px;
+					font-size: 200px;
+					position: center;
+					opacity: 0;
+					z-index: 10;
+				}
+				label {
+					position: center;
+					z-index: 5;
+					opacity: 0.8;
+					cursor: pointer;
+					background-color: #bdc3c7;
+					width: 200px;
+					height: 50px;
+					font-size: 20px;
+					line-height: 50px;
+					text-transform: uppercase;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					text-align: center;
+				}
+			}
+		</style>
+
+		<!-- upload photo script -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$.uploadPreview({
+					input_field: "#image-upload",
+					preview_box: "#image-preview",
+					label_field: "#image-label"
+				});
+			});
+		</script>
+
 	</head>
 	<body>
 
@@ -115,42 +169,20 @@
 								<h2><a href='#' >Create a recipe </a></h2>
 							</div>
 						</header>
+
 						<h3>Recipe Title</h3>
-						<input id="cook_name" name="cook_name" type="text" maxlength="30" class="upfnam r5" value="Recipe Title" onfocus="if(this.value==&#39;Recipe Title&#39;) {this.value=&#39;&#39;; $(this).addClass(&#39;fcbm&#39;); }" onblur="if(!this.value) {this.value=&#39;Recipe Title&#39;;$(this).removeClass(&#39;fcbm&#39;);}">
+						<input id="recipe title" type="text" name="title" value="" placeholder="Recipe Title">
+					</br>
+						<h3>Recipe Photo</h3>
+						<!-- Recipe Photo -->
+						<div id="image-preview">
+							<label for="image-upload" id="image-label">Choose File</label>
+							<input id="image upload" type='file' onchange="readURL(this);" />
+							<img id="blah" class="image" alt="" width="100%" align="center" />
+						</div>
 					</br>
 						<div class="upfood clearfix">
 							<div class="foicp pvl clearfix libufo">
-								<div id="imgUploadNow">
-									<div style="position: relative; display: block; overflow: hidden; width: 600px;">
-										<div class="buttadd2" id="uploadCookImage"></div>
-										<input tabindex="-1" type="file" name="uploadFile" style="position: absolute; margin: 0px; padding: 0px; width: 220px; opacity: 0; top: 149px; left: 86px;">
-									</div>
-									<div class="iload2" id="iloading" style="display:none;">
-								  		正在上传…
-									</div>
-								</div>
-								<input type="hidden" name="coverImageUrl" id="coverImageUrl">
-								<div class="mrl" id="imgUploadSucc" style="display:none;position: relative;">
-									 <img id="upCookImageCover" src="" style="cursor:pointer;width:600px; height:400px;">
-									 <span title="更换图片" class="ic_chare2" style="right:20px;"></span>
-								</div>
-								<!--
-								<div class="restory pbm" style="margin-top: 20px;">
-									<select id="cook_difficulty" name="cook_difficulty" class="seleco">
-										<option value="">How Difficult</option>
-										<option value="1">Beginner</option>
-										<option value="2">Medium</option>
-										<option value="3">High</option>
-									</select>
-									<select id="costtime" name="costtime" class="seleco">
-										<option value="">Time Spend</option>
-										<option value="10分左右">10 min</option>
-										<option value="10-30分钟">10-30 min</option>
-										<option value="30-60分钟">30-60 min</option>
-										<option value="1小时以上">more than 1 hour</option>
-									</select>
-								</div>
-								-->
 								<!-- ingradient table -->
 								<div class="ingredient table">
 									<section>
@@ -187,59 +219,6 @@
 										<h3>Steps</h3>
 											<span>Step 1</span>
 												<div>
-													<style type="text/css">
-														#image-preview {
-  															width: 400px;
-  															min-height: 200px;
-  															height: auto;
-														  	position: center;
-														  	border-width: 5px;
-														  	border-color: #f0f0f0;
-														  	border-style: solid;
-														  	vertical-align: center;
-														  	line-height: 0;
-
-														  	background-color: #e0e0e0;
-														  	color: #ecf0f1;
-														  	input {
-														    	line-height: 200px;
-														    	font-size: 200px;
-														    	position: center;
-														    	opacity: 0;
-														    	z-index: 10;
-														  	}
-														  	label {
-														    	position: center;
-														    	z-index: 5;
-															    opacity: 0.8;
-															    cursor: pointer;
-															    background-color: #bdc3c7;
-															    width: 200px;
-															    height: 50px;
-															    font-size: 20px;
-															    line-height: 50px;
-															    text-transform: uppercase;
-															    top: 0;
-															    left: 0;
-															    right: 0;
-															    bottom: 0;
-															    margin: auto;
-															    text-align: center;
-														  	}
-														}
-													</style>
-
-													<script type="text/javascript">
-														$(document).ready(function() {
-														  	$.uploadPreview({
-														    	input_field: "#image-upload",
-														    	preview_box: "#image-preview",
-														    	label_field: "#image-label"
-														  	});
-														});
-
-
-													</script>
 													<script type="text/javascript">
 												        function readURL(input) {
 												            if (input.files && input.files[0]) {
@@ -253,7 +232,6 @@
 												                document.getElementById('remove image1').style.visibility = 'visible';
 												            }
 														}
-
 														function removeImage(){
 														  	document.getElementById("remove image1").style.visibility="hidden";
 														  	$('#blah').attr('src', "");

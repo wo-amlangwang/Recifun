@@ -6,25 +6,25 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style> 
+		<style>
 			body {
 		    	background-image: url("images/img1.png");
 			}
-			
+
 
 			div.block {
 				background-color:white;
 				color:black;
 				margin:20px;
 				padding:20px;
-			} 
-			
+			}
+
 			div.innerblock {
 				background-color:#d3d3d3;
 				color:black;
 				margin:20px;
 				padding:20px;
-			} 
+			}
 
 		</style>
 	</head>
@@ -106,8 +106,8 @@
 											<p>Notification, comments, etc.</p>
 										</a>
 									</li>
-									
-									
+
+
 								</ul>
 							</section>
 
@@ -124,39 +124,69 @@
 				<!-- Main -->
 					<div id="main">
 						<article class="post">
-							
+							<header>
+								<div class="title">
+									<h2><a href='#' >Notifications </a></h2>
+								</div>
+
+							<!-- User Status -->
+								<div class="meta">
+									<a href="#" class="author"><span class="name">username</span><img src="images/avatar.jpg" alt="" /></a>
+									<List>
+										<a href="#" class="button small">Follow 123</a>
+										<a href="#" class="button small">Follower 321</a>
+									</List>
+								</div>
+							</header>
+
 						<!-- user information table -->
-							<section> 
-								<div class="table-wrapper"> 
+							<section>
+								<div class="table-wrapper">
 									<table class="alt">
-								 
+
 										<!-- HERE PUT THE LOOP FOR THE RESULT LINKS -->
-										
-										<div> <a href=\"#">阳春面</a>
-										<div class="block">
-										<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div> 
-										</div>  
-										<div class="block">
-										<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div> 
-										</div> 
-										</div> 
-										
-										<div> <a href=\"#">宫保虾球</a>
-										<div class="block">
-										<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div> 
-										</div>  
-										<div class="block">
-										<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div> 
-										</div> 
-										</div> 
-										
-										             
-										
+
+										<div class="notification" id="notificationId">
+											<a href=\"#">阳春面</a>
+											<div class="block">
+												<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
+											</div>
+											<div class="block">
+												<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
+											</div>
+										<!-- reply block -->
+											<div>
+												<span class="12u$">
+													<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
+												</span>
+												<button class="button small">Reply</a>
+											</div>
+										</div>
+									</br>
+										<div class="notification" id="notificationId">
+											<a href=\"#">宫保虾球</a>
+											<div class="block">
+												<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
+											</div>
+											<div class="block">
+												<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
+											</div>
+										<!-- reply block -->
+											<div>
+												<span class="12u$">
+													<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
+												</span>
+												<button class="button small">Reply</a>
+											</div>
+										</div>
+
+
+
 									</table>
 								</div>
 							</section>
 
-					
+
 
 				<!-- Sidebar -->
 					<section id="sidebar">
