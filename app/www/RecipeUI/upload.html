@@ -79,6 +79,28 @@
 			});
 		</script>
 
+		<script type="text/javascript">
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+
+					reader.onload = function (e) {
+						// This is where to load image
+						// id is different with different image, if add more image, you should change id of image
+						// and $('#step1') as well
+						$('#step1').attr('src', e.target.result);
+					}
+
+					reader.readAsDataURL(input.files[0]);
+					document.getElementById('remove image1').style.visibility = 'visible';
+				}
+			}
+			function removeImage(){
+				document.getElementById("remove image1").style.visibility="hidden";
+				$('#blah').attr('src', "");
+			}
+		</script>
+
 	</head>
 	<body>
 
@@ -233,29 +255,12 @@
 										<h3>Steps</h3>
 											<span>Step 1</span>
 												<div>
-													<script type="text/javascript">
-												        function readURL(input) {
-												            if (input.files && input.files[0]) {
-												                var reader = new FileReader();
 
-												                reader.onload = function (e) {
-												                    $('#blah1').attr('src', e.target.result);
-												                }
-
-												                reader.readAsDataURL(input.files[0]);
-												                document.getElementById('remove image1').style.visibility = 'visible';
-												            }
-														}
-														function removeImage(){
-														  	document.getElementById("remove image1").style.visibility="hidden";
-														  	$('#blah').attr('src', "");
-														}
-												    </script>
 
 													<div id="image-preview">
 														<label for="image-upload" id="image-label">Choose File</label>
 														<input id="image upload" type='file' onchange="readURL(this);" />
-														<img id="blah1" class="image" alt="" width="100%" align="center" />
+														<img id="step1" class="image" alt="" width="100%" align="center" />
 													</div>
 													<div><button class="remove image" id="remove image1" onclick="removeImage()">Remove</button></div>
 												</br>
