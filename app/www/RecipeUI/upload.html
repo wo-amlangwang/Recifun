@@ -16,6 +16,11 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript" src="assets/js/jquery.uploadPreview.min.js"></script>
 		<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript">
+			window.onload=function(){
+ 				document.getElementById("remove image").style.visibility='hidden';
+			}
+		</script>
 
 	</head>
 	<body>
@@ -184,16 +189,19 @@
   															width: 400px;
   															min-height: 200px;
   															height: auto;
-														  	position: relative;
+														  	position: center;
+														  	border-width: 5px;
+														  	border-color: #f0f0f0;
+														  	border-style: solid;
+														  	vertical-align: center;
+														  	line-height: 0;
 														  	
 														  	background-color: #e0e0e0;
 														  	color: #ecf0f1;
 														  	input {
 														    	line-height: 200px;
 														    	font-size: 200px;
-														    	position: absolute;
-														    	width: auto;
-  															height: auto;
+														    	position: center;
 														    	opacity: 0;
 														    	z-index: 10;
 														  	}
@@ -239,8 +247,14 @@
 												                }
 
 												                reader.readAsDataURL(input.files[0]);
+												                document.getElementById('remove image').style.visibility = 'visible';
 												            }
-												        }
+														}
+
+														function removeImage(){
+														  	document.getElementById("remove image").style.visibility="hidden";
+														  	$('#blah').attr('src', "");
+														}
 												    </script>
 
 													<div id="image-preview">
@@ -248,8 +262,9 @@
 														<input id="image upload" type='file' onchange="readURL(this);" />
 														<img id="blah" class="image" alt="" width="100%" align="center" />
 													</div>
-												</div>	
-												</br>			
+													<div><button class="remove image" id="remove image" onclick="removeImage()">Remove</button></div>
+												</br>	
+												</div>			
 												<span class="12u$">
 													<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
 												</span>
