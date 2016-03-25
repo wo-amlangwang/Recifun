@@ -175,10 +175,24 @@
 					</br>
 						<h3>Recipe Photo</h3>
 						<!-- Recipe Photo -->
+						<script type="text/javascript">
+							function readURLRI(input) {
+								if (input.files && input.files[0]) {
+									var reader = new FileReader();
+
+									reader.onload = function (e) {
+										$('#recipeImg').attr('src', e.target.result);
+									}
+
+									reader.readAsDataURL(input.files[0]);
+									document.getElementById('remove image1').style.visibility = 'visible';
+								}
+							}
+						</script>
 						<div id="image-preview">
 							<label for="image-upload" id="image-label">Choose File</label>
-							<input id="image upload" type='file' onchange="readURL(this);" />
-							<img id="blah" class="image" alt="" width="100%" align="center" />
+							<input id="image upload" type='file' onchange="readURLRI(this);" />
+							<img id="recipeImg" class="image" alt="" width="100%" align="center" />
 						</div>
 					</br>
 						<div class="upfood clearfix">
@@ -225,7 +239,7 @@
 												                var reader = new FileReader();
 
 												                reader.onload = function (e) {
-												                    $('#blah').attr('src', e.target.result);
+												                    $('#blah1').attr('src', e.target.result);
 												                }
 
 												                reader.readAsDataURL(input.files[0]);
@@ -241,7 +255,7 @@
 													<div id="image-preview">
 														<label for="image-upload" id="image-label">Choose File</label>
 														<input id="image upload" type='file' onchange="readURL(this);" />
-														<img id="blah" class="image" alt="" width="100%" align="center" />
+														<img id="blah1" class="image" alt="" width="100%" align="center" />
 													</div>
 													<div><button class="remove image" id="remove image1" onclick="removeImage()">Remove</button></div>
 												</br>
