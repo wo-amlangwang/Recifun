@@ -18,7 +18,10 @@
 		<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
 		<script type="text/javascript">
 			window.onload=function(){
- 				document.getElementById("remove image").style.visibility='hidden';
+ 				var buttonsShouldHide = document.getElementsByClassName("remove image");
+ 				for(var i = 0; i < buttonsShouldHide.length; i++) {
+				    buttonsShouldHide[i].style.visibility = 'hidden';
+				}
 			}
 		</script>
 
@@ -247,12 +250,12 @@
 												                }
 
 												                reader.readAsDataURL(input.files[0]);
-												                document.getElementById('remove image').style.visibility = 'visible';
+												                document.getElementById('remove image1').style.visibility = 'visible';
 												            }
 														}
 
 														function removeImage(){
-														  	document.getElementById("remove image").style.visibility="hidden";
+														  	document.getElementById("remove image1").style.visibility="hidden";
 														  	$('#blah').attr('src', "");
 														}
 												    </script>
@@ -262,7 +265,7 @@
 														<input id="image upload" type='file' onchange="readURL(this);" />
 														<img id="blah" class="image" alt="" width="100%" align="center" />
 													</div>
-													<div><button class="remove image" id="remove image" onclick="removeImage()">Remove</button></div>
+													<div><button class="remove image" id="remove image1" onclick="removeImage()">Remove</button></div>
 												</br>	
 												</div>			
 												<span class="12u$">
