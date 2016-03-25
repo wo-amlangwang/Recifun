@@ -181,8 +181,9 @@
 												<div>
 													<style type="text/css">
 														#image-preview {
-														  	width: 400px;
-														  	height: 400px;
+  															width: 400px;
+  															min-height: 200px;
+  															height: auto;
 														  	position: relative;
 														  	
 														  	background-color: #e0e0e0;
@@ -191,11 +192,13 @@
 														    	line-height: 200px;
 														    	font-size: 200px;
 														    	position: absolute;
+														    	width: auto;
+  															height: auto;
 														    	opacity: 0;
 														    	z-index: 10;
 														  	}
 														  	label {
-														    	position: absolute;
+														    	position: center;
 														    	z-index: 5;
 															    opacity: 0.8;
 															    cursor: pointer;
@@ -243,7 +246,7 @@
 													<div id="image-preview">
 														<label for="image-upload" id="image-label">Choose File</label>
 														<input id="image upload" type='file' onchange="readURL(this);" />
-														<img id="blah"/>
+														<img id="blah" class="image" alt="" width="100%" align="center" />
 													</div>
 												</div>	
 												</br>			
