@@ -184,7 +184,7 @@
 														  	width: 400px;
 														  	height: 400px;
 														  	position: relative;
-														  	overflow: hidden;
+														  	
 														  	background-color: #e0e0e0;
 														  	color: #ecf0f1;
 														  	input {
@@ -223,11 +223,27 @@
 														    	label_field: "#image-label"
 														  	});
 														});
+
+
 													</script>
+													<script type="text/javascript">
+												        function readURL(input) {
+												            if (input.files && input.files[0]) {
+												                var reader = new FileReader();
+
+												                reader.onload = function (e) {
+												                    $('#blah').attr('src', e.target.result);
+												                }
+
+												                reader.readAsDataURL(input.files[0]);
+												            }
+												        }
+												    </script>
 
 													<div id="image-preview">
 														<label for="image-upload" id="image-label">Choose File</label>
-														<input type="file" name="image" id="image-upload" />
+														<input id="image upload" type='file' onchange="readURL(this);" />
+														<img id="blah"/>
 													</div>
 												</div>	
 												</br>			
