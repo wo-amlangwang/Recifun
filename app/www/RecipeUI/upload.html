@@ -1,217 +1,96 @@
-<!DOCTYPE HTML>
+<header>
+	<div class="title">
+		<h2><a href='#' >Create a recipe </a></h2>
+	</div>
+</header>
 
-<html>
-	<head>
-		<title>ReciFun</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-		    	background-image: url("images/img1.png");
-			}
-		</style>
+<h3>Recipe Title</h3>
+<input id="recipe title" type="text" name="title" value="" placeholder="Recipe Title">
+</br>
+<h3>Recipe Photo</h3>
+<!-- Recipe Photo -->
+<div id="image-preview">
+	<label for="image-upload" id="image-label">Choose File</label>
+	<input id="image upload" type='file' onchange="readURLRI(this);" />
+	<img id="recipeImg" class="image" alt="" width="100%" align="center" />
+</div>
+</br>
 
-	</head>
-	<body>
+<!-- Uplaod video by Youtube Embed -->
+<div>
+	<header>
+		<div class="title">
+			<h2>Vedio URL</h2>
+			<p>Click share under the video. Choose "Enbed" and copy the URL only in the textfeild.</p>
+		</div>
+	</header>
+	<input id="videoURL" type="text" name="title" value="" placeholder="URL in the src = """>
+</div>
+</br>
 
-		<!-- Wrapper -->
-		<div id="wrapper">
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="#">ReciFun</a></h1>
-				<nav class="main">
-					<ul>
-						<li class="search">
-							<a class="fa-search" href="#search">Search</a>
-							<form id="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
-						</li>
-						<li class="menu">
-							<a class="fa-bars" href="#menu">Menu</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<!-- Menu -->
-			<section id="menu">
-
-				<!-- Links -->
-				<section>
-					<ul class="links">
-						<li>
-							<a href="#">
-								<h3>Edit Profile</h3>
-								<p>Personal information, edit allowed</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<h3>My recipes</h3>
-								<p>The recipes uploaded by yourself</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<h3>Favorite</h3>
-								<p>The recipes you saved</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<h3>Followed</h3>
-								<p>The uploader you followed</p>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<h3>Message</h3>
-								<p>Notification, comments, etc.</p>
-							</a>
-						</li>
-					</ul>
-				</section>
-
-				<!-- Actions -->
-				<section>
-					<ul class="actions vertical">
-						<li><a href="#" class="button big fit">Log In</a></li>
-					</ul>
-				</section>
+<div class="upfood clearfix">
+	<div class="foicp pvl clearfix libufo">
+		<!-- ingradient table -->
+		<div class="ingredient table">
+			<section>
+				<h3>Ingradients</h3>
+				<div class="row uniform">
+					<div id="ingredient-name" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+					</div>
+					<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+					</div>
+					<div id="ingredient-name" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+					</div>
+					<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+					</div>
+					<div id="ingredient-name" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
+					</div>
+					<div id="ingredient-quantity" class="6u 12u$(xsmall)">
+							<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
+					</div>
+					<div class="adlan">
+						<a class="button small" href="javascript:void(0);" tabindex="-1" id="zhuliao" style="display:block;">add more</a>
+					</div>
+				</div>
 			</section>
+		</br>
+		</div>
+		<!-- step -->
+		<div>
+			<div>
+				<h3>Steps</h3>
+					<span>Step 1</span>
+						<div>
 
-			<!-- Main -->
-			<div id="main">
-				<article class="post">
-					<header>
-						<div class="title">
-							<h2><a href='#' >Create a recipe </a></h2>
+
+							<div id="image-preview">
+								<label for="image-upload" id="image-label">Choose File</label>
+								<input id="image upload" type='file' onchange="readURL(this);" />
+								<img id="step1" class="image" alt="" width="100%" align="center" />
+							</div>
+							<div><button class="remove image" id="remove image1" onclick="removeImage()">Remove</button></div>
+						</br>
 						</div>
-					</header>
-
-					<h3>Recipe Title</h3>
-					<input id="recipe title" type="text" name="title" value="" placeholder="Recipe Title">
+						<span class="12u$">
+							<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
+						</span>
+					</li>
+				</ul>
 				</br>
-					<h3>Recipe Photo</h3>
-					<!-- Recipe Photo -->
-					<div id="image-preview">
-						<label for="image-upload" id="image-label">Choose File</label>
-						<input id="image upload" type='file' onchange="readURLRI(this);" />
-						<img id="recipeImg" class="image" alt="" width="100%" align="center" />
-					</div>
-					</br>
-
-					<!-- Uplaod video by Youtube Embed -->
-					<div>
-						<header>
-							<div class="title">
-								<h2>Vedio URL</h2>
-								<p>Click share under the video. Choose "Enbed" and copy the URL only in the textfeild.</p>
-							</div>
-						</header>
-						<input id="videoURL" type="text" name="title" value="" placeholder="URL in the src = """>
-					</div>
-					</br>
-
-					<div class="upfood clearfix">
-						<div class="foicp pvl clearfix libufo">
-							<!-- ingradient table -->
-							<div class="ingredient table">
-								<section>
-									<h3>Ingradients</h3>
-									<div class="row uniform">
-										<div id="ingredient-name" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
-										</div>
-										<div id="ingredient-quantity" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
-										</div>
-										<div id="ingredient-name" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
-										</div>
-										<div id="ingredient-quantity" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
-										</div>
-										<div id="ingredient-name" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Gradient name" />
-										</div>
-										<div id="ingredient-quantity" class="6u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Quantity" />
-										</div>
-										<div class="adlan">
-											<a class="button small" href="javascript:void(0);" tabindex="-1" id="zhuliao" style="display:block;">add more</a>
-										</div>
-									</div>
-								</section>
-							</br>
-							</div>
-							<!-- step -->
-							<div>
-								<div>
-									<h3>Steps</h3>
-										<span>Step 1</span>
-											<div>
-
-
-												<div id="image-preview">
-													<label for="image-upload" id="image-label">Choose File</label>
-													<input id="image upload" type='file' onchange="readURL(this);" />
-													<img id="step1" class="image" alt="" width="100%" align="center" />
-												</div>
-												<div><button class="remove image" id="remove image1" onclick="removeImage()">Remove</button></div>
-											</br>
-											</div>
-											<span class="12u$">
-												<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
-											</span>
-										</li>
-									</ul>
-									</br>
-								</div>
-							</div>
-							<div style="display:block;">
-								 <a class="button small"  href="javascript:void(0);" tabindex="-1" id="addBuZhou">Add more steps</a>
-							</div>
-							</br>
-						</div>
-					</div>
-					<div>
-						<button class="button large" id="upload" >Upload</button>
-						<button class="button large" id="cancel" >Cancel</button>
-					</div>
-					<!-- Sidebar -->
-					<section id="sidebar">
-
-						<!-- Intro -->
-							<section id="intro">
-								<header>
-									<h4>ReciFun</h4>
-									<p color="#FFFAFA">
-									This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
-								</header>
-							</section>
-
-					</section>
-				</article>
 			</div>
 		</div>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script src="assets/js/main.js"></script>
-		<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-		<script type="text/javascript" src="assets/js/jquery.uploadPreview.min.js"></script>
-		<script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery.uploadPreview.min.js"></script>
-		<script type="text/javascript" src="assets/js/jquery-2.0.3.min.js"></script>
-		<link rel="stylesheet" href="assets/css/application.css" />
-		<link rel="stylesheet" href="assets/css/extra.css" />
-		<script src="assets/js/upload.js"></script>
-	</body>
-</html>
+		<div style="display:block;">
+			 <a class="button small"  href="javascript:void(0);" tabindex="-1" id="addBuZhou">Add more steps</a>
+		</div>
+		</br>
+	</div>
+</div>
+<div>
+	<button class="button large" id="upload" >Upload</button>
+	<button class="button large" id="cancel" >Cancel</button>
+</div>

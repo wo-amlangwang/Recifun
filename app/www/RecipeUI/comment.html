@@ -1,209 +1,86 @@
-<!DOCTYPE HTML>
+<!-- Main -->
+<div id="main">
 
-<html>
-	<head>
-		<title>ReciFun</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			body {
-		    	background-image: url("images/img1.png");
-			}
-		</style>
-	</head>
-	<body>
-		<!-- Wrapper -->
-		<div id="wrapper">
-
-			<!-- Header -->
-			<header id="header">
-				<h1><a href="#">ReciFun</a></h1>
-				<nav class="main">
-					<ul>
-						<li class="search">
-							<a class="fa-search" href="#search">Search</a>
-							<form id="search" method="get" action="#">
-								<input type="text" name="query" placeholder="Search" />
-							</form>
-						</li>
-						<li class="menu">
-							<a class="fa-bars" href="#menu">Menu</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
-
-			<!-- Drop Down Menu -->
-			<section id="menu">
-
-				<!-- Links -->
-				<div id="links">
-					<section>
-						<ul class="links">
-							<li>
-								<a href="#">
-									<h3>Edit Profile</h3>
-									<p>Personal information, edit allowed</p>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<h3>My recipes</h3>
-									<p>The recipes uploaded by yourself</p>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<h3>Favorite</h3>
-									<p>The recipes you saved</p>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<h3>Followed</h3>
-									<p>The uploader you followed</p>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<h3>Message</h3>
-									<p>Notification, comments, etc.</p>
-								</a>
-							</li>
-						</ul>
-					</section>
-				</div>
-
-			    <!-- Actions -->
-				<section>
-					<ul class="actions vertical">
-
-					    <!-- Login -->
-						<div id="login">
-							<div id="loginTextField">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Username" />
-								</br>
-								<input type="password" name="demo-password" id="demo-password" value="" placeholder="Password" />
-							</div>
-							<li><a href="#" class="button big fit">Log In</a></li>
-						</div>
-
-                        <!-- Register -->
-						<div id="register">
-							<div id="registerTextField">
-								<input type="text" name="demo-name" id="demo-name" value="" placeholder="Username" />
-								</br>
-								<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</br>
-								<input type="password" name="demo-password" id="demo-password" value="" placeholder="Password" />
-								</br>
-								<input type="password" name="demo-password" id="demo-password" value="" placeholder="Confirm Password" />
-							</div>
-							<li><a href="#" class="button big fit">Sign up</a></li>
-						</div>
-					</ul>
-				</section>
-            </section>
-
-            <!-- Main -->
-			<div id="main">
-
-				<article class="post">
-					<header>
-						<div class="title">
-							<h2><a href='#' >Comments </a></h2>
-						</div>
-
-        				<!-- User Status -->
-        				<div class="meta">
-        					<a href="#" class="author"><span class="name">username</span><img src="images/avatar.jpg" alt="" /></a>
-        					<List>
-        						<a href="#" class="button small">Follow 123</a>
-        						<a href="#" class="button small">Follower 321</a>
-        					</List>
-        				</div>
-                    </header>
-				</article>
-
-                    <!-- Enter Content Here -->
-					<!-- user information table -->
-					<section>
-						<div class="table-wrapper">
-							<table class="alt">
-								<article class="post">
-									<!-- HERE PUT THE LOOP FOR THE RESULT LINKS -->
-									<div class="notification" id="notificationId">
-										<a href=\"#">阳春面</a>
-										<div class="block">
-											<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
-										</div>
-										<div class="block">
-											<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
-										</div>
-									<!-- reply block -->
-										<div>
-											<span class="12u$">
-												<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
-											</span>
-											<button class="button small">Reply</button>
-										</div>
-									</div>
-									</br>
-								</article>
-
-								<article class="post">
-									<div class="notification" id="notificationId">
-										<a href=\"#">宫保虾球</a>
-										<div class="block">
-											<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
-										</div>
-										<div class="block">
-											<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
-										</div>
-									<!-- reply block -->
-										<div>
-											<span class="12u$">
-												<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
-											</span>
-											<button class="button small">Reply</button>
-										</div>
-									</div>
-									</br>
-								</article>
-							</table>
-						</div>
-					</section>
-
-                    <!-- End Content Here -->
-
-                    <!-- Recifun -->
-        			<section id="sidebar">
-        				<!-- Intro -->
-        				<section id="intro">
-        					<header>
-        						<h4>ReciFun</h4>
-        						<p color="#FFFAFA">
-        						This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
-        					</header>
-        				</section>
-        			</section>
-
-                <!-- End Line -->
+	<article class="post">
+		<header>
+			<div class="title">
+				<h2><a href='#' >Comments </a></h2>
 			</div>
-            <!-- End Main -->
-        </div>
-        <!-- End Wrapper -->
 
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/skel.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
-		<link href="assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<!-- User Status -->
+			<div class="meta">
+				<a href="#" class="author"><span class="name">username</span><img src="images/avatar.jpg" alt="" /></a>
+				<List>
+					<a href="#" class="button small">Follow 123</a>
+					<a href="#" class="button small">Follower 321</a>
+				</List>
+			</div>
+        </header>
+	</article>
 
-        <!-- Add Extra Script Here -->
-		<link rel="stylesheet" href="assets/css/extra.css" />
+        <!-- Enter Content Here -->
+		<!-- user information table -->
+		<section>
+			<div class="table-wrapper">
+				<table class="alt">
+					<article class="post">
+						<!-- HERE PUT THE LOOP FOR THE RESULT LINKS -->
+						<div class="notification" id="notificationId">
+							<a href=\"#">阳春面</a>
+							<div class="block">
+								<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
+							</div>
+							<div class="block">
+								<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
+							</div>
+						<!-- reply block -->
+							<div>
+								<span class="12u$">
+									<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
+								</span>
+								<button class="button small">Reply</button>
+							</div>
+						</div>
+						</br>
+					</article>
 
-	</body>
-</html>
+					<article class="post">
+						<div class="notification" id="notificationId">
+							<a href=\"#">宫保虾球</a>
+							<div class="block">
+								<div><a bpfilter=\"page_frame\" title=\"小王爱做饭" usercard=\"id=\" href=\""><b>小王爱做饭:</b></a></div> <div>回复:真的放洋葱么 味道会不会很奇怪</div>
+							</div>
+							<div class="block">
+								<div><a bpfilter=\"page_frame\" title=\"小李爱做饭" usercard=\"id=\" href=\""><b>小李爱做饭:</b></a></div> <div>回复:真的放大蒜么 味道会不会很奇怪</div>
+							</div>
+						<!-- reply block -->
+							<div>
+								<span class="12u$">
+									<textarea onclick="$(this).focus();" name="demo-message" id="demo-message"></textarea>
+								</span>
+								<button class="button small">Reply</button>
+							</div>
+						</div>
+						</br>
+					</article>
+				</table>
+			</div>
+		</section>
+
+        <!-- End Content Here -->
+
+        <!-- Recifun -->
+		<section id="sidebar">
+			<!-- Intro -->
+			<section id="intro">
+				<header>
+					<h4>ReciFun</h4>
+					<p color="#FFFAFA">
+					This is a recipe app with great photo steps. Our aim is to find a easier way to cook.</p>
+				</header>
+			</section>
+		</section>
+
+    <!-- End Line -->
+</div>
+<!-- End Main -->
